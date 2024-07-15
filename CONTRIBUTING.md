@@ -1,66 +1,25 @@
-# Contributing to \<reponame\> 
+# Contributing to BLS Climate Chamber
 
-Contributions to \<reponame\> are welcome from all!
-
-\<reponame\> is managed via [git](https://git-scm.com), with the canonical upstream
-repository hosted on [GitHub](https://github.com/ni/<reponame>/).
-
-\<reponame\> follows a pull-request model for development.  If you wish to
-contribute, you will need to create a GitHub account, fork this project, push a
-branch with your changes to your project, and then submit a pull request.
-
-Please remember to sign off your commits (e.g., by using `git commit -s` if you
-are using the command line client). This amends your git commit message with a line
-of the form `Signed-off-by: Name Lastname <name.lastmail@emailaddress.com>`. Please
-include all authors of any given commit into the commit message with a
-`Signed-off-by` line. This indicates that you have read and signed the Developer
-Certificate of Origin (see below) and are able to legally submit your code to
-this repository.
-
-See [GitHub's official documentation](https://help.github.com/articles/using-pull-requests/) for more details.
 
 # Getting Started
 
-- TODO: include build steps here.
-- Errors must be carried from read VIs to write VIs for process data.vi and then merged for the error out.
-- For Read VIs, changes can be made to the output (such as the SP nodes), and then passed along as input to the Write VIs (for example, the AV nodes).
+- Build steps
+    - Expand "RT PXI Target"
+    - Expand "Build Specifications"
+    - Right-click "BLS Power Supply Template" and select "Build"
+
 
 # Testing
 
-- TODO: include testing steps here.
-- Using PA tools
-- Getting the right IP address for the PXI and RMX power supply
-    - Setting this as an input in ctl
+- ADD MORE INFO
 
-# Developer Certificate of Origin (DCO)
+# Style Guide
 
-   Developer's Certificate of Origin 1.1
+These basic requirements should enforce meaningful consistency across capabilities without causing considerable developer pain.
 
-   By making a contribution to this project, I certify that:
-
-   (a) The contribution was created in whole or in part by me and I
-       have the right to submit it under the open source license
-       indicated in the file; or
-
-   (b) The contribution is based upon previous work that, to the best
-       of my knowledge, is covered under an appropriate open source
-       license and I have the right under that license to submit that
-       work with modifications, whether created in whole or in part
-       by me, under the same open source license (unless I am
-       permitted to submit under a different license), as indicated
-       in the file; or
-
-   (c) The contribution was provided directly to me by some other
-       person who certified (a), (b) or (c) and I have not modified
-       it.
-
-   (d) I understand and agree that this project and the contribution
-       are public and that a record of the contribution (including all
-       personal information I submit with it, including my sign-off) is
-       maintained indefinitely and may be redistributed consistent with
-       this project or the open source license(s) involved.
-
-(taken from [developercertificate.org](https://developercertificate.org/))
-
-See [LICENSE](https://github.com/ni/<reponame>/blob/main/LICENSE)
-for details about how \<reponame\> is licensed.
+1. All Block Diagrams should be arranged using `ctrl+u`
+1. All Block Diagrams and Front Panels shall be sized using the built-in `ctrl+space` `ctrl+f` quick-drop formatter.
+1. All Controls and Indicators on a block diagram shall be configured with "Show as Icon" `Unchecked`.
+1. All Block Diagrams shall have Controls/Indicators formatted using the built-in `ctrl+space` `ctrl+t` quick-drop formatter.
+1. All icons shall have a meaningful class name in the header.
+1. All icons shall be formatted using the built-in `ctrl+space` `ctrl+k` quick-drop formatter (Use this after saving the VI).
