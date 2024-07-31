@@ -1,40 +1,21 @@
 # bls-climate-chamber-plugin-template
 
-This repository contains a template for building a Battery Lab Software Plugin for a Climate Chamber.
-
-# How to Use Template
-
-1. Clone or download this repository.
-2. Copy its contents into your project (including the hidden .github directory). 
-3. Customize each file to suit your project's needs (including the README). Look through the files for "TODO" and \<reponame\>, and replace with content appropriate to your project.
-
-# Creating the LabVIEW Plugin
+This repository contains a template for building a Battery Lab Software Plugin for a Power Supply to use with PAtools.
+It requires the [BLS Capabilities](https://github.com/ni/bls-capabilities).
 
 ## Supported Versions
 
 - PAtools 8.4+
 - LinuxRT 24Q2+
 - LabVIEW 2023Q3+
-- BLS Capabilities API 0.5+
-- ADAS Replay HIL Development Suite 24Q1
+- BLS Capabilities API 1.0+
+- ADAS Replay HIL Development Suite 24Q1+
 
-1. Install the ADAS Replay and HIL AD Development Suite for LabVIEW.
-1. Install the [BLS Capabilities API](https://github.com/ni/bls-capabilities).
-1. Refer to the [ADAS Plugin Development](https://github.com/ni/adas-replay-hil-internal/wiki/Node-Development) to create your basic plugin.
-1. Refer to the BLS Capabilities API Readme for more information.
+# Create your own plugin
+Make sure you read the [BLS Capabilities README](https://github.com/ni/bls-capabilities). [Here](https://github.com/ni/bls-capabilities/blob/main/BLSTEMPLATES.md) it is described how to create your own plugin and how to test it.
 
-## Package Deployer for BLS Plugins
-
-The test/ plugin contains an example for a package which will install the lvlibp to the RT target. Follow these simple steps to update your Plugin.
-
-1. Open your Plugin LabVIEW Project.
-1. Right-click Build Specifications.
-1. Select Package.
-1. Under Source Files, select the lvlibp.
-1. Select the blue arrow to add the lvlibp to the destination.
-  - :cactus: LabVIEW will compile the lvlibp and automatically configure the directory.
-1. Select Package and configure all the fields for your device.
-1. Select OK.
+# PAtools Integration
+see [PAtools Integration Readme](/patools-integration/PAtools%20Integration%20README.md)
 
 
 # Climate Chamber Plugin Description
