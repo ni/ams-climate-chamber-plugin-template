@@ -1,6 +1,6 @@
 # ams-climate-chamber-plugin-template
 
-This repository contains a template for building a Battery Lab Software Plugin for a Power Supply to use with PAtools.
+This repository contains a template for building a AMS Plugin for a Climate Chamber to use with PAtools.
 It requires the [AMS Capabilities](https://github.com/ni/ams-capabilities).
 
 ## Supported Versions
