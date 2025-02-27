@@ -597,7 +597,6 @@
 			<Item Name="AB_Get_Info_From_GUID.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/AppBuilder/AB_Get_Info_From_GUID.vi"/>
 			<Item Name="provcom_GetProvidersDirPseudo.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_GetProvidersDirPseudo.vi"/>
 			<Item Name="mxLvGetItemRef.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvGetItemRef.vi"/>
-			<Item Name="9c1d1a77308d2a44" Type="VI" URL="/&lt;resource&gt;/9c1d1a77308d2a44"/>
 			<Item Name="_LaunchHelpUrl.vi" Type="VI" URL="/&lt;helpdir&gt;/_LaunchHelpUrl.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
@@ -778,9 +777,8 @@ AddOutputFilter chunkFilter
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="AdasLvTemplateOutOfBand_Queue.lvlib" Type="Library" URL="/&lt;vilib&gt;/ADAS Replay HIL/ADAS Plugin Utilities/AdasLvTemplateOutOfBand_Queue/AdasLvTemplateOutOfBand_Queue.lvlib"/>
 				<Item Name="Is Value Changed.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Is Value Changed.vim"/>
-				<Item Name="Tag Wrapper.lvlib" Type="Library" URL="/&lt;vilib&gt;/ADAS Replay HIL/Channels/Tag Wrapper/Tag Wrapper.lvlib"/>
-				<Item Name="JSONtext.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JSONtext/JSONtext.lvlib"/>
 				<Item Name="JDP Utility.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/JDP Utility.lvlib"/>
+				<Item Name="JSONtext.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JSONtext/JSONtext.lvlib"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="SEH Shared Error Options.ctl" Type="VI" URL="/&lt;userlib&gt;/_SEH/Controls/SEH/SEH Shared Error Options.ctl"/>
@@ -924,8 +922,8 @@ AddOutputFilter chunkFilter
 				<Item Name="WrapperHelpers.lvlib" Type="Library" URL="/C/Program Files/National Instruments/ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoPluginWrapperSDK.lvlibp/WrapperHelpers/WrapperHelpers.lvlib"/>
 			</Item>
 			<Item Name="EVOXDataAccessors.lvlib" Type="Library" URL="/C/Program Files/National Instruments/ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoXDataAccessors.llb/EVOXDataAccessors.lvlib"/>
-			<Item Name="Apply Gradient.vi" Type="VI" URL="/C/Program Files/National Instruments/BLS plugin/CC/Apply Gradient.vi"/>
-			<Item Name="Create Asset JSON.vi" Type="VI" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Create Asset JSON.vi"/>
+			<Item Name="Apply Gradient.vi" Type="VI" URL="../Apply Gradient.vi"/>
+			<Item Name="Create Asset JSON.vi" Type="VI" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Create Asset JSON.vi"/>
 			<Item Name="evoBlockPlugin.lvlibp" Type="LVLibp" URL="/C/Program Files/National Instruments/ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoBlockPlugin.lvlibp">
 				<Item Name="BlockWrapper" Type="Folder">
 					<Item Name="DirectCall" Type="Folder">
@@ -948,23 +946,24 @@ AddOutputFilter chunkFilter
 				<Item Name="BlockPluginInterface.2023.1.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoBlockPlugin.lvlibp/evoBlockPlugin/BlockPluginInterface.2023.1/BlockPluginInterface.2023.1.lvclass"/>
 				<Item Name="WrapperHelpers.lvlib" Type="Library" URL="/C/Program Files/National Instruments/ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoBlockPlugin.lvlibp/WrapperHelpers/WrapperHelpers.lvlib"/>
 			</Item>
-			<Item Name="OnOff.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Low Level Capabilities/OnOff/OnOff.lvclass"/>
-			<Item Name="Utilities.lvlib" Type="Library" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Utilities/Utilities.lvlib"/>
-			<Item Name="Capabilities.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Capabilities.lvclass"/>
-			<Item Name="Temperature Setpoint.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Setpoint/Temperature Setpoint.lvclass"/>
-			<Item Name="Setpoint.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Parents/Setpoint/Setpoint.lvclass"/>
-			<Item Name="Temperature Actual Value.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Actual Value/Temperature Actual Value.lvclass"/>
-			<Item Name="Actual Value.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Parents/Actual Value/Actual Value.lvclass"/>
-			<Item Name="Error.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Low Level Capabilities/Error/Error.lvclass"/>
-			<Item Name="Temperature Gradient.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Gradient/Temperature Gradient.lvclass"/>
-			<Item Name="Gradient.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Parents/Gradient/Gradient.lvclass"/>
-			<Item Name="Temperature Limit.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Limit/Temperature Limit.lvclass"/>
-			<Item Name="Limit.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Parents/Limit/Limit.lvclass"/>
-			<Item Name="Humidity Setpoint.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Low Level Capabilities/Humidity/Humidity Setpoint/Humidity Setpoint.lvclass"/>
-			<Item Name="Humidity Limit.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Low Level Capabilities/Humidity/Humidity Limit/Humidity Limit.lvclass"/>
-			<Item Name="Humidity Gradient.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Low Level Capabilities/Humidity/Humidity Gradient/Humidity Gradient.lvclass"/>
-			<Item Name="Humidity Actual Value.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/Low Level Capabilities/Humidity/Humidity Actual Value/Humidity Actual Value.lvclass"/>
-			<Item Name="Climate Chamber.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/BLS plugin/Capabilities/Capabilities/High Level Capabilities/Climate Chamber/Climate Chamber.lvclass"/>
+			<Item Name="Climate Chamber.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/High Level Capabilities/Climate Chamber/Climate Chamber.lvclass"/>
+			<Item Name="OnOff.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Low Level Capabilities/OnOff/OnOff.lvclass"/>
+			<Item Name="Tag Wrapper.lvlib" Type="Library" URL="../../../adas-replay-hil-internal/source/Channels/Tag Wrapper/Tag Wrapper.lvlib"/>
+			<Item Name="Utilities.lvlib" Type="Library" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Utilities/Utilities.lvlib"/>
+			<Item Name="Capabilities.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Capabilities.lvclass"/>
+			<Item Name="Temperature Setpoint.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Setpoint/Temperature Setpoint.lvclass"/>
+			<Item Name="Setpoint.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Parents/Setpoint/Setpoint.lvclass"/>
+			<Item Name="Temperature Actual Value.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Actual Value/Temperature Actual Value.lvclass"/>
+			<Item Name="Actual Value.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Parents/Actual Value/Actual Value.lvclass"/>
+			<Item Name="Error.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Low Level Capabilities/Error/Error.lvclass"/>
+			<Item Name="Temperature Gradient.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Gradient/Temperature Gradient.lvclass"/>
+			<Item Name="Gradient.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Parents/Gradient/Gradient.lvclass"/>
+			<Item Name="Temperature Limit.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Limit/Temperature Limit.lvclass"/>
+			<Item Name="Limit.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Parents/Limit/Limit.lvclass"/>
+			<Item Name="Humidity Setpoint.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Low Level Capabilities/Humidity/Humidity Setpoint/Humidity Setpoint.lvclass"/>
+			<Item Name="Humidity Limit.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Low Level Capabilities/Humidity/Humidity Limit/Humidity Limit.lvclass"/>
+			<Item Name="Humidity Gradient.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Low Level Capabilities/Humidity/Humidity Gradient/Humidity Gradient.lvclass"/>
+			<Item Name="Humidity Actual Value.lvclass" Type="LVClass" URL="/C/Program Files/National Instruments/AMS plugin/Capabilities/Capabilities/Low Level Capabilities/Humidity/Humidity Actual Value/Humidity Actual Value.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="AMS Climate Chamber Template" Type="Packed Library">
@@ -977,18 +976,18 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_localDestDir" Type="Path">/C/builds/RT</Property>
 				<Property Name="Bld_preActionVIID" Type="Ref">/My Computer/Pre-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D97CD1D6-D13C-4DB8-9216-011E18E426CA}</Property>
-				<Property Name="Bld_targetDestDir" Type="Path">/usr/lib/x86_64-linux-gnu/ni-evo-engine/plugins</Property>
+				<Property Name="Bld_targetDestDir" Type="Path">/usr</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">AMS Climate Chamber Template.1.0.lvlibp</Property>
-				<Property Name="Destination[0].path" Type="Path">/usr/lib/x86_64-linux-gnu/ni-evo-engine/plugins/AMS Climate Chamber Template.1.0.lvlibp</Property>
+				<Property Name="Destination[0].path" Type="Path">/usr/AMS Climate Chamber Template.1.0.lvlibp</Property>
 				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">/usr/lib/x86_64-linux-gnu/ni-evo-engine/plugins</Property>
+				<Property Name="Destination[1].path" Type="Path">/usr</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{DE235376-5401-45D2-951D-B8882F5CFD90}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{C57F2A39-B80D-4460-BCFB-4B886DAE6B8E}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/RT PXI Target/AMS Climate Chamber Template.lvlib</Property>
