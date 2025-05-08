@@ -1,0 +1,133 @@
+{
+  "Name":"AMS Climate Chamber Template",
+  "Version":{"Major":2,"Minor":0,"Fix":0,"Build":0},
+  "Configuration":{
+    "Name":"Custom Parameters",
+    "DataType":"Container",
+    "ExtraTypeInfo":"",
+    "DataValue":"",
+    "SubNodes":[
+      {
+        "Name":"Common",
+        "DataType":"Container",
+        "ExtraTypeInfo":"",
+        "DataValue":"",
+        "SubNodes":[
+          {
+            "Name":"Iteration Interval (s)",
+            "DataType":"Double",
+            "ExtraTypeInfo":"",
+            "DataValue":"0.010000",
+            "SubNodes":[]
+          },
+          {
+            "Name":"T0 (ns)",
+            "DataType":"U64",
+            "ExtraTypeInfo":"",
+            "DataValue":"0",
+            "SubNodes":[]
+          },
+          {
+            "Name":"Priority",
+            "DataType":"I32",
+            "ExtraTypeInfo":"",
+            "DataValue":"100",
+            "SubNodes":[]
+          },
+          {
+            "Name":"Processor",
+            "DataType":"I32",
+            "ExtraTypeInfo":"",
+            "DataValue":"-2",
+            "SubNodes":[]
+          },
+          {
+            "Name":"Wait in Ready State",
+            "DataType":"Boolean",
+            "ExtraTypeInfo":"",
+            "DataValue":"TRUE",
+            "SubNodes":[]
+          }
+        ]
+      },
+      {
+        "Name":"Amount of Channels",
+        "DataType":"U32",
+        "ExtraTypeInfo":"",
+        "DataValue":"1",
+        "SubNodes":[]
+      },
+      {
+        "Name":"Address",
+        "DataType":"String",
+        "ExtraTypeInfo":"",
+        "DataValue":"localhost",
+        "SubNodes":[]
+      }
+    ]
+  },
+  "Channels":[
+    {
+      "Title":"Consumer Control ",
+      "SubTitle":["OnOff.ACT","ErrorAcknowledge.ACT"],
+      "Consumer?":true,
+      "Name":"_Consumer Control ",
+      "Description":"Consumer Control",
+      "Size":8,
+      "OffSets":[0,1],
+      "DataType":["Boolean","Boolean"],
+      "DefaultValue":[0,0]
+    },
+    {
+      "Title":"Producer Control ",
+      "SubTitle":["OnOff.STS","Error.STS","Watchdog.STS"],
+      "Consumer?":false,
+      "Name":"_Producer Control ",
+      "Description":"Producer Control",
+      "Size":16,
+      "OffSets":[0,4,8],
+      "DataType":["I32","I32","I32"],
+      "DefaultValue":[0,0,0]
+    },
+    {
+      "Title":"Consumer Ch 1",
+      "SubTitle":[
+        "Temperature.SP",
+        "TemperatureMIN.SP",
+        "TemperatureMAX.SP",
+        "TemperatureGrad.SP",
+        "Humidity.SP",
+        "HumidityMIN.SP",
+        "HumidityMAX.SP",
+        "HumidityGrad.SP"
+      ],
+      "Consumer?":true,
+      "Name":"_Consumer Ch 1",
+      "Description":"Consumer Ch",
+      "Size":64,
+      "OffSets":[0,8,16,24,32,40,48,56],
+      "DataType":[
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double",
+        "double"
+      ],
+      "DefaultValue":[0,0,0,0,0,0,0,0]
+    },
+    {
+      "Title":"Producer Ch 1",
+      "SubTitle":["Temperature.AV","Humidity.AV"],
+      "Consumer?":false,
+      "Name":"_Producer Ch 1",
+      "Description":"Producer Ch",
+      "Size":16,
+      "OffSets":[0,8],
+      "DataType":["double","double"],
+      "DefaultValue":[0,0]
+    }
+  ]
+}
