@@ -14,6 +14,7 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Pre-Build Action.vi" Type="VI" URL="../Build Actions/Pre-Build Action.vi"/>
+		<Item Name="Post-Build Action.vi" Type="VI" URL="../Build Actions/Post-Build Action.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="AdasReplayUtilities.lvlib" Type="Library" URL="/&lt;vilib&gt;/ADAS Replay HIL/AdasReplayUtilities/AdasReplayUtilities.lvlib"/>
@@ -465,6 +466,11 @@
 				<Item Name="NI_SHA-3.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/security/Message Digest/SHA-3/NI_SHA-3.lvclass"/>
 				<Item Name="NI_Keccak.lvlib" Type="Library" URL="/&lt;vilib&gt;/security/Message Digest/Keccak/NI_Keccak.lvlib"/>
 				<Item Name="NI_SHA-512.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/security/Message Digest/SHA-2/SHA-512/NI_SHA-512.lvclass"/>
+				<Item Name="JDP Utility.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/JDP Utility.lvlib"/>
+				<Item Name="JSONtext.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JSONtext/JSONtext.lvlib"/>
+				<Item Name="subFile Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/FileDialogBlock.llb/subFile Dialog.vi"/>
+				<Item Name="ex_CorrectErrorChain.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_CorrectErrorChain.vi"/>
+				<Item Name="Assert Error Cluster Type.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/TypeAssert/Assert Error Cluster Type.vim"/>
 			</Item>
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
 			<Item Name="mxLvGetItem.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvGetItem.vi"/>
@@ -599,6 +605,10 @@
 			<Item Name="mxLvGetItemRef.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvGetItemRef.vi"/>
 			<Item Name="_LaunchHelpUrl.vi" Type="VI" URL="/&lt;helpdir&gt;/_LaunchHelpUrl.vi"/>
 			<Item Name="9c1d1a77308d2a44" Type="VI" URL="/&lt;resource&gt;/9c1d1a77308d2a44"/>
+			<Item Name="Utilities.lvlib" Type="Library" URL="../../Capabilities/Capabilities/Utilities/Utilities.lvlib"/>
+			<Item Name="AdasHilServices.dll" Type="Document" URL="AdasHilServices.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
@@ -711,10 +721,14 @@ AddOutputFilter chunkFilter
 		<Item Name="Tests" Type="Folder">
 			<Item Name="SubVI" Type="Folder">
 				<Item Name="Get Version from Build Spec.vi" Type="VI" URL="../Tests/Get Version from Build Spec.vi"/>
+				<Item Name="Create Enhanced Config JSON.vi" Type="VI" URL="../Tests/Create Enhanced Config JSON.vi"/>
 			</Item>
 			<Item Name="Test AMS Climate Chamber Template.vi" Type="VI" URL="../Tests/Test AMS Climate Chamber Template.vi"/>
 			<Item Name="Test AMS Climate Chamber Template UI.vi" Type="VI" URL="../Tests/Test AMS Climate Chamber Template UI.vi"/>
 			<Item Name="Create Config JSON.vi" Type="VI" URL="../Tests/Create Config JSON.vi"/>
+		</Item>
+		<Item Name="Simulation" Type="Folder">
+			<Item Name="Apply Gradient.vi" Type="VI" URL="../Simulation/Apply Gradient.vi"/>
 		</Item>
 		<Item Name="AMS Climate Chamber Template.lvlib" Type="Library" URL="../Plugin/AMS Climate Chamber Template.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -777,12 +791,11 @@ AddOutputFilter chunkFilter
 				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="AdasLvTemplateOutOfBand_Queue.lvlib" Type="Library" URL="/&lt;vilib&gt;/ADAS Replay HIL/ADAS Plugin Utilities/AdasLvTemplateOutOfBand_Queue/AdasLvTemplateOutOfBand_Queue.lvlib"/>
-				<Item Name="Is Value Changed.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Is Value Changed.vim"/>
 				<Item Name="JDP Utility.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/JDP Utility.lvlib"/>
 				<Item Name="JSONtext.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JSONtext/JSONtext.lvlib"/>
-				<Item Name="Tag Wrapper.lvlib" Type="Library" URL="/&lt;vilib&gt;/ADAS Replay HIL/Channels/Tag Wrapper/Tag Wrapper.lvlib"/>
 				<Item Name="subFile Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/FileDialogBlock.llb/subFile Dialog.vi"/>
 				<Item Name="ex_CorrectErrorChain.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_CorrectErrorChain.vi"/>
+				<Item Name="NI_XML.lvlib" Type="Library" URL="/&lt;vilib&gt;/xml/NI_XML.lvlib"/>
 			</Item>
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="SEH Shared Error Options.ctl" Type="VI" URL="/&lt;userlib&gt;/_SEH/Controls/SEH/SEH Shared Error Options.ctl"/>
@@ -925,8 +938,7 @@ AddOutputFilter chunkFilter
 				<Item Name="WrapperHelpers.lvlib" Type="Library" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoPluginWrapperSDK.lvlibp/WrapperHelpers/WrapperHelpers.lvlib"/>
 			</Item>
 			<Item Name="EVOXDataAccessors.lvlib" Type="Library" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoXDataAccessors.llb/EVOXDataAccessors.lvlib"/>
-			<Item Name="Apply Gradient.vi" Type="VI" URL="../Apply Gradient.vi"/>
-			<Item Name="Create Asset JSON.vi" Type="VI" URL="../../Capabilities/Create Asset JSON.vi"/>
+			<Item Name="Utilities.lvlib" Type="Library" URL="../../Capabilities/Capabilities/Utilities/Utilities.lvlib"/>
 			<Item Name="evoBlockPlugin.lvlibp" Type="LVLibp" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoBlockPlugin.lvlibp">
 				<Item Name="BlockWrapper" Type="Folder">
 					<Item Name="DirectCall" Type="Folder">
@@ -949,23 +961,11 @@ AddOutputFilter chunkFilter
 				<Item Name="BlockPluginInterface.2023.1.lvclass" Type="LVClass" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoBlockPlugin.lvlibp/evoBlockPlugin/BlockPluginInterface.2023.1/BlockPluginInterface.2023.1.lvclass"/>
 				<Item Name="WrapperHelpers.lvlib" Type="Library" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoBlockPlugin.lvlibp/WrapperHelpers/WrapperHelpers.lvlib"/>
 			</Item>
-			<Item Name="Climate Chamber.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/High Level Capabilities/Climate Chamber/Climate Chamber.lvclass"/>
-			<Item Name="OnOff.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/OnOff/OnOff.lvclass"/>
-			<Item Name="Utilities.lvlib" Type="Library" URL="../../Capabilities/Capabilities/Utilities/Utilities.lvlib"/>
-			<Item Name="Capabilities.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Capabilities.lvclass"/>
-			<Item Name="Temperature Setpoint.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Setpoint/Temperature Setpoint.lvclass"/>
-			<Item Name="Setpoint.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Parents/Setpoint/Setpoint.lvclass"/>
-			<Item Name="Temperature Actual Value.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Actual Value/Temperature Actual Value.lvclass"/>
-			<Item Name="Actual Value.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Parents/Actual Value/Actual Value.lvclass"/>
-			<Item Name="Error.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Error/Error.lvclass"/>
-			<Item Name="Temperature Gradient.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Gradient/Temperature Gradient.lvclass"/>
-			<Item Name="Gradient.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Parents/Gradient/Gradient.lvclass"/>
-			<Item Name="Temperature Limit.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Temperature/Temperature Limit/Temperature Limit.lvclass"/>
-			<Item Name="Limit.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Parents/Limit/Limit.lvclass"/>
-			<Item Name="Humidity Setpoint.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Humidity/Humidity Setpoint/Humidity Setpoint.lvclass"/>
-			<Item Name="Humidity Limit.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Humidity/Humidity Limit/Humidity Limit.lvclass"/>
-			<Item Name="Humidity Gradient.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Humidity/Humidity Gradient/Humidity Gradient.lvclass"/>
-			<Item Name="Humidity Actual Value.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Low Level Capabilities/Humidity/Humidity Actual Value/Humidity Actual Value.lvclass"/>
+			<Item Name="Climate Chamber Cluster.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/High Level Capabilities/Climate Chamber Cluster/Climate Chamber Cluster.lvclass"/>
+			<Item Name="DOMUserDefRef.dll" Type="Document" URL="DOMUserDefRef.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Cluster.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Parents/Cluster/Cluster.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="AMS Climate Chamber Template" Type="Packed Library">
@@ -976,12 +976,13 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeTypedefs" Type="Bool">true</Property>
 				<Property Name="Bld_localDestDir" Type="Path">/C/builds/RT</Property>
+				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/Post-Build Action.vi</Property>
 				<Property Name="Bld_preActionVIID" Type="Ref">/My Computer/Pre-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D97CD1D6-D13C-4DB8-9216-011E18E426CA}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/usr</Property>
-				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Destination[0].destName" Type="Str">AMS Climate Chamber Template.1.0.lvlibp</Property>
-				<Property Name="Destination[0].path" Type="Path">/usr/AMS Climate Chamber Template.1.0.lvlibp</Property>
+				<Property Name="Bld_version.major" Type="Int">2</Property>
+				<Property Name="Destination[0].destName" Type="Str">AMS Climate Chamber Template.2.0.lvlibp</Property>
+				<Property Name="Destination[0].path" Type="Path">/usr/AMS Climate Chamber Template.2.0.lvlibp</Property>
 				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
@@ -989,7 +990,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Destination[1].path" Type="Path">/usr</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{C57F2A39-B80D-4460-BCFB-4B886DAE6B8E}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{40EFC26E-DF8A-4C79-B700-D1EEFB5E0D29}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/RT PXI Target/AMS Climate Chamber Template.lvlib</Property>
@@ -1006,7 +1007,7 @@ AddOutputFilter chunkFilter
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2022 NI</Property>
 				<Property Name="TgtF_productName" Type="Str">AMS Climate Chamber Template</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{E1985B85-F159-441F-9EAD-7499C0C5512C}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">AMS Climate Chamber Template.1.0.lvlibp</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">AMS Climate Chamber Template.2.0.lvlibp</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 		</Item>
