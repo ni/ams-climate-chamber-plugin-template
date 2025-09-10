@@ -68,10 +68,10 @@
   },
   "Channels":[
     {
-      "Title":"Consumer Control ",
+      "Title":"Consumer Control",
       "SubTitle":["OnOff.ACT","ErrorAcknowledge.ACT"],
       "Consumer?":true,
-      "Name":"_Consumer Control ",
+      "Name":"_Consumer Control",
       "Description":"Consumer Control",
       "Size":8,
       "OffSets":[0,1],
@@ -79,10 +79,10 @@
       "DefaultValue":[0,0]
     },
     {
-      "Title":"Producer Control ",
+      "Title":"Producer Control",
       "SubTitle":["OnOff.STS","Error.STS","Watchdog.STS"],
       "Consumer?":false,
-      "Name":"_Producer Control ",
+      "Name":"_Producer Control",
       "Description":"Producer Control",
       "Size":16,
       "OffSets":[0,4,8],
