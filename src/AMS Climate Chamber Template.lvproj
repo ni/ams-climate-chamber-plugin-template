@@ -604,6 +604,7 @@
 			<Item Name="provcom_GetProvidersDirPseudo.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_GetProvidersDirPseudo.vi"/>
 			<Item Name="mxLvGetItemRef.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvGetItemRef.vi"/>
 			<Item Name="_LaunchHelpUrl.vi" Type="VI" URL="/&lt;helpdir&gt;/_LaunchHelpUrl.vi"/>
+			<Item Name="9c1d1a77308d2a44" Type="VI" URL="/&lt;resource&gt;/9c1d1a77308d2a44"/>
 			<Item Name="Utilities.lvlib" Type="Library" URL="../../Capabilities/Capabilities/Utilities/Utilities.lvlib"/>
 			<Item Name="AdasHilServices.dll" Type="Document" URL="AdasHilServices.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -828,6 +829,10 @@ AddOutputFilter chunkFilter
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
+			<Item Name="Climate Chamber Cluster.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/High Level Capabilities/Climate Chamber Cluster/Climate Chamber Cluster.lvclass"/>
+			<Item Name="DOMUserDefRef.dll" Type="Document" URL="DOMUserDefRef.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 			<Item Name="evoPluginSDK.lvlibp" Type="LVLibp" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoPluginSDK.lvlibp">
 				<Item Name="EventData" Type="Folder">
 					<Item Name="ExecuteEventData.ctl" Type="VI" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoPluginSDK.lvlibp/VIs/EventData/ExecuteEventData.ctl"/>
@@ -959,10 +964,6 @@ AddOutputFilter chunkFilter
 				<Item Name="BlockPluginInterface.2020.1.lvclass" Type="LVClass" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoBlockPlugin.lvlibp/evoBlockPlugin/BlockPluginInterface.2020.1/BlockPluginInterface.2020.1.lvclass"/>
 				<Item Name="BlockPluginInterface.2023.1.lvclass" Type="LVClass" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoBlockPlugin.lvlibp/evoBlockPlugin/BlockPluginInterface.2023.1/BlockPluginInterface.2023.1.lvclass"/>
 				<Item Name="WrapperHelpers.lvlib" Type="Library" URL="../../../ADAS Replay HIL/EVO SDK/Linux RT/evoLabVIEWAPI/evoBlockPlugin.lvlibp/WrapperHelpers/WrapperHelpers.lvlib"/>
-			</Item>
-			<Item Name="Climate Chamber Cluster.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/High Level Capabilities/Climate Chamber Cluster/Climate Chamber Cluster.lvclass"/>
-			<Item Name="DOMUserDefRef.dll" Type="Document" URL="DOMUserDefRef.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="Cluster.lvclass" Type="LVClass" URL="../../Capabilities/Capabilities/Parents/Cluster/Cluster.lvclass"/>
 		</Item>
