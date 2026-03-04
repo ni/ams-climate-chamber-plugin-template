@@ -161,7 +161,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Destination[1].path" Type="Path">/usr</Property>
 				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{1B5B08BB-08DC-40FC-855B-FB5FDDD68AE2}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{B672B234-CA32-4319-A003-840B854DF057}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/RT PXI Target/AMS Climate Chamber Template.lvlib</Property>
